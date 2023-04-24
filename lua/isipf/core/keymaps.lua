@@ -4,9 +4,6 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- shortcut for consiseness
 -- general keymaps
 
--- while in insert mode, typing "jk" = ESC (back to normal mode)
-keymap.set("i", "jk", "<ESC>")
-
 -- while in normal mode, SP-nh = clear search hightlights
 keymap.set("n","<leader>nh",":nohl<CR>")
 
@@ -14,15 +11,15 @@ keymap.set("n","<leader>nh",":nohl<CR>")
 keymap.set("n", "x", '"_x')
 
 -- while on a number, allow to increment,decrement the number with leader-+ ou leader-
-keymap.set("n", "<leader>+", "<C-a>")
-keymap.set("n", "<leader>-", "<C-x>")
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
 
 
 -- split screen key maps
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make split equal width
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split
+keymap.set("n", "<leader>se", "<C-w>=") -- split equal width
+keymap.set("n", "<leader>sx", ":close<CR>") -- split eXit current 
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximize current window (use vim maxmizer plugin)
 
 
