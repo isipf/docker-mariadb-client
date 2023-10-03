@@ -1,0 +1,7 @@
+# do daily/weekly/monthly maintenance
+# min	hour	day	month	weekday	command
+*/15	*	*	*	*	run-parts /etc/periodic/15min
+0	*	*	*	*	run-parts /etc/periodic/hourly
+0	11	*	*	*	run-parts /etc/periodic/daily
+0	12	*	*	6	run-parts /etc/periodic/weekly
+0	13	1	*	*	run-parts /etc/periodic/monthly
